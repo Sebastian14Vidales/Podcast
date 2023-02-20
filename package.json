@@ -1,0 +1,32 @@
+{
+  "name": "04-podcastapp",
+  "version": "1.0.0",
+  "description": "Podcast with Bootstrap 5, SASS and Gulpfile JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastian14Vidales/Podcast.git"
+  },
+  "keywords": [
+    "Bootstrap",
+    "5",
+    "SASS",
+    "Gulpfile"
+  ],
+  "author": "Sebastian Vidales Claros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebastian14Vidales/Podcast/issues"
+  },
+  "homepage": "https://github.com/Sebastian14Vidales/Podcast#readme",
+  "devDependencies": {
+    "bootstrap": "^5.2.3",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3"
+  }
+}

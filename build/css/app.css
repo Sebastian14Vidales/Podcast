@@ -143,11 +143,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: calc(1.44rem + 2.28vw);
+  font-size: calc(1.425rem + 2.1vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 3.15rem;
+    font-size: 3rem;
   }
 }
 
@@ -8036,7 +8036,7 @@ textarea.form-control-lg {
 }
 
 .fs-3 {
-  font-size: calc(1.44rem + 2.28vw) !important;
+  font-size: calc(1.425rem + 2.1vw) !important;
 }
 
 .fs-4 {
@@ -10897,7 +10897,7 @@ textarea.form-control-lg {
     font-size: 3.6rem !important;
   }
   .fs-3 {
-    font-size: 3.15rem !important;
+    font-size: 3rem !important;
   }
   .fs-4 {
     font-size: 2.7rem !important;
@@ -10942,15 +10942,19 @@ textarea.form-control-lg {
   }
 }
 .boton-header {
-  background-color: #84D9BC;
   color: #313C4E;
+  background-color: #84D9BC;
   text-decoration: none;
   padding: 1.2rem 5rem;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   display: block;
+  transition: background-color 300ms ease;
   margin-top: 5rem;
+}
+.boton-header:hover {
+  background-color: #71d3b1;
 }
 @media (min-width: 768px) {
   .boton-header {
@@ -11038,9 +11042,15 @@ textarea.form-control-lg {
 }
 @media (min-width: 768px) {
   .negocios .imagen {
-    transition-property: transform;
-    transition-duration: 300ms;
+    transition: transform 300ms ease;
   }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .negocios .imagen {
+    transition: none;
+  }
+}
+@media (min-width: 768px) {
   .negocios .imagen:hover {
     transform: scale(1.1) rotate(8deg);
   }
@@ -11063,4 +11073,87 @@ textarea.form-control-lg {
   height: 1rem;
   background-color: #84D9BC;
   margin-top: -1.2rem;
+}
+
+.planes h2 {
+  color: #fff;
+  display: inline-block;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .planes h2 {
+    margin-top: 0;
+  }
+}
+.planes h2::after {
+  content: "";
+  display: block;
+  width: calc(100% + 1rem);
+  height: 1rem;
+  background-color: #84D9BC;
+  margin-top: -1.2rem;
+}
+
+.plan {
+  padding: 16rem 4rem 4rem 4rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .plan {
+    transition: transform 300ms ease;
+    border: none;
+  }
+  .plan:hover {
+    transform: scale(1.1);
+  }
+}
+.plan .precio {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.plan.inicio {
+  background-image: url("../img/icono_inicio.svg");
+  background-size: 10rem;
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+}
+.plan.negocio {
+  background-image: url("../img/icono_negocio.svg");
+  background-size: 10rem;
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .plan.negocio {
+    margin-top: -5rem;
+    margin-bottom: -5rem;
+    border-radius: 2rem;
+    z-index: 1;
+    padding-top: calc(16rem + 5rem);
+    background-position: 50% calc(2rem + 5rem);
+  }
+}
+.plan.negocio a {
+  border: 1px solid #fff;
+}
+.plan.pro {
+  background-image: url("../img/icono_pro.svg");
+  background-size: 10rem;
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+}
+.plan .boton-plan {
+  color: #313C4E;
+  background-color: #84D9BC;
+  text-decoration: none;
+  padding: 1.2rem 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  transition: background-color 300ms ease;
+}
+.plan .boton-plan:hover {
+  background-color: #71d3b1;
 }
